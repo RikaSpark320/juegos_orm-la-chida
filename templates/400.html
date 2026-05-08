@@ -1,0 +1,19 @@
+{% extends "maestra.html" %}
+{% block titulo %}400 - Solicitud incorrecta{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-1">Error 400</h1>
+        <p class="subtitle is-3">Solicitud incorrecta</p>
+        <p class="is-size-5">Tu solicitud no pudo ser entendida por el servidor.</p>
+        <p class="is-size-5 mt-4">
+            {% if error.description %}
+                {{ error.description }}
+            {% else %}
+                Por favor, verifica los datos enviados.
+            {% endif %}
+        </p>
+        <a href="{{ url_for('juegos') }}" class="button is-primary is-large mt-5">Volver al inicio</a>
+    </div>
+</section>
+{% endblock %}

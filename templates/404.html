@@ -1,0 +1,13 @@
+{% extends "maestra.html" %}
+{% block titulo %}404 - Página no encontrada{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-1">Error 404</h1>
+        <p class="subtitle is-3">Página no encontrada</p>
+        <p class="is-size-5">Lo sentimos, la página que buscas no existe o fue movida.</p>
+        <a href="{{ url_for('juegos') }}" class="button is-primary is-large mt-5">Volver al inicio</a>
+        <!--  -->
+    </div>
+</section>
+{% endblock %}

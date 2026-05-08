@@ -1,0 +1,12 @@
+{% extends "maestra.html" %}
+{% block titulo %}405 - Método no permitido{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-1">Error 405</h1>
+        <p class="subtitle is-3">Método no permitido</p>
+        <p class="is-size-5">El método (GET, POST, PUT, etc.) que estás usando no está permitido para esta URL.</p>
+        <a href="{{ url_for('juegos') }}" class="button is-primary is-large mt-5">Volver al inicio</a>
+    </div>
+</section>
+{% endblock %}

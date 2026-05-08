@@ -1,0 +1,14 @@
+2025-11-07 22:49:31,489 ERROR: Excepción no controlada: division by zero [in C:\Users\Migue\OneDrive\Documents\CUValles\7° Semestre\DBDW\juegos_orm\main.py:163]
+Traceback (most recent call last):
+  File "C:\Users\Migue\OneDrive\Documents\env\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Migue\OneDrive\Documents\env\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Migue\OneDrive\Documents\env\env\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Migue\OneDrive\Documents\CUValles\7° Semestre\DBDW\juegos_orm\main.py", line 106, in test_500
+    x = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
