@@ -1,7 +1,4 @@
 name: Python CI Flask
-services:
-      mysql:
-        image: mysql:8.0
 
 on:
   push:
