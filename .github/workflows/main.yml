@@ -10,7 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Definimos el servicio de MySQL para que esté disponible durante los pasos
     services:
       mysql:
         image: mysql:8.0
@@ -38,10 +37,8 @@ jobs:
 
     - name: Ejecutar pruebas (Pytest)
       env:
-        # Le indicamos a la app que use la base de datos del servicio de arriba
         DATABASE_URL: mysql+pymysql://root@127.0.0.1:3306/juegos
       run: |
-        # Aquí corre los tests sobre tu ruta
         pytest --cov=. --cov-report=xml
 
     - name: Subir reporte a Codecov
